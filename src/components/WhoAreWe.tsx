@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function WhoAreWe() {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
+
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
@@ -76,11 +76,15 @@ export default function WhoAreWe() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
-      <div
-        ref={bgRef}
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${bg})` }}
-      />
+ <div  className="absolute inset-0 overflow-hidden">
+  <img
+    src={bg}
+    alt="Background"
+    className="w-full h-full object-cover"
+          loading="lazy"
+          
+  />
+</div>
       <div className="absolute inset-0 bg-black/70" />
 
       <div className="relative z-10 w-full max-w-7xl px-4 sm:px-8 py-12 flex flex-col gap-12">
