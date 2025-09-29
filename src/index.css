@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "@fontsource-variable/montserrat";
+/* @import "@fontsource-variable/cairo"; */
+
+
+/* @keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} */
+
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-secondary: var(--secondary);
+  --color-fg: var(--fg);
+  --color-rightg: var(--rightg);
+  --color-sfg: var(--sfg);
+  --color-ssfg: var(--ssfg);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-highlight: var(--highlight);
+}
+
+:root {
+  --bg: oklch(0.9494 0.2035 107);
+  --secondary: 		#f7f7f7;
+  --rightg :#00FF00 ; 
+  --fg: oklch(0.34 0.17 328.9);
+  --sfg :oklch(0.8714 0.1751 92.61) ;
+  --ssfg:#FAFA33 ; 
+  --accent: oklch(0.68 0.12 253.21);
+  --accent-hover: oklch(0.62 0.14 253.21);
+  --muted: oklch(0.88 0.005 270);
+  --border: oklch(0.78 0.005 270);
+  --highlight: oklch(0.93 0.03 253.21);
+}
+
+
+.highlight {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+}
+
+.highlight-bg {
+  background-image: linear-gradient(to right, var(--bg) 0%, var(--bg) 100%);
+}
+
+.highlight-rightg {
+  background-image: linear-gradient(
+    to right,
+    var(--rightg) 0%,
+    var(--rightg) 100%
+  );
+}
