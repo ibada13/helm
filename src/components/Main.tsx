@@ -19,8 +19,8 @@ const Main = () => {
   },[])
 
   return (
-    <section className="relative min-h-screen overflow-hidden ">
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen overflow-hidden bg-black">
+      {/* <div className="absolute inset-0">
         <video
           autoPlay
           loop
@@ -32,7 +32,7 @@ const Main = () => {
         >
           <source src={video} type="video/mp4" />
         </video>
-      </div>
+      </div> */}
 
       <div className="absolute inset-0 bg-black/60" />
 
