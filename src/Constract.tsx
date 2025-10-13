@@ -1,30 +1,36 @@
+import {  Routes, Route,useLocation } from 'react-router-dom';
 import NavBar from "./components/NavBar";
-import Main from "./components/Main";
 
-
-import WhoAreWe from "./components/WhoAreWe";
-import OurServices from "./components/OurServices";
-import OurProjects from "./components/OurProjects";
 import Footer from "./components/Footer";
-export default function Constract() { 
+import LandingPage from './components/LandingPage/LandingPage';
+import { useEffect } from 'react';
+const NotFound = () => { 
+
+  return (
+    <div className='h-screen w-screen flex justify-center items-center bg-secondary'>
+      <h1 className='text-3xl font-bold uppercase text-bg border-2 mt-12  border-black p-20 rounded'> Not Found - 404</h1>
+    </div>
+  )
+}
+export default function Constract() {
+    const loaction = useLocation();
 
 
-
-
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [loaction]);
     return (
-        <>
-            <NavBar />
-            
-            <main>
-                <Main />
-                <WhoAreWe />
-                <OurServices />
-                <OurProjects/>
+      <>
 
-            </main>
-            <Footer />
-        
-        </>
-    );
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+            <Route path='*' element = {<NotFound/>} />
+        </Routes>
+      </main>
+      <Footer />
+ 
+      </>
+  );
 }

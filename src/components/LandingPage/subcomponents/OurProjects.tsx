@@ -58,7 +58,7 @@ export default function OurProjects() {
             across the UK,{" "}
             <span className="highlight highlight-bg px-1">HelmBuild</span> has
             successfully delivered projects that reflect{" "}
-            <span className="highlight highlight-rightg px-1">
+            <span className="highlight highlight-bg px-1">
               durability, design, and innovation
             </span>
             .

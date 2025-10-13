@@ -85,7 +85,7 @@ export default function WhoAreWe() {
           
   />
 </div>
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 w-full max-w-7xl px-4 sm:px-8 py-12 flex flex-col gap-12">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "./assets/logo.png";
+import logo from "./logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function NavBar() {
@@ -9,7 +9,7 @@ export default function NavBar() {
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "Why Us?", to: "/why-us" },
-    { name: "Experts", to: "/experts" },
+    { name: "Our Experts", to: "/experts" },
     { name: "Projects", to: "/Projects" },
   ];
 
@@ -19,13 +19,13 @@ export default function NavBar() {
       : "text-gray-700 hover:text-black transition-colors";
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 md:w-5/6 lg:w-2/3 bg-white/80 backdrop-blur-xl border border-white/20 rounded-full shadow-lg px-6 py-3 flex items-center justify-between z-50">
-      {/* Logo */}
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 md:w-5/6 lg:w-2/3 bg-secondary backdrop-blur-xl border border-white/20 rounded-xl shadow-lg px-6 py-3 flex items-center justify-between z-50">
+      
       <NavLink to="/" className="flex-shrink-0">
         <img src={logo} alt="Logo" className="w-10 h-10" />
       </NavLink>
 
-      {/* Links - Desktop */}
+      
       <ul className="hidden md:flex items-center space-x-8">
         {navLinks.map((link, i) => (
           <li key={i}>
@@ -41,14 +41,14 @@ export default function NavBar() {
         ))}
       </ul>
 
-      {/* CTA - Desktop */}
+      
       <div className="hidden md:block">
-        <button className="px-5 py-2 rounded-full bg-bg text-black font-semibold shadow-md hover:shadow-lg transition">
+        <button className="px-5 py-2 hover:cursor-pointer rounded-full bg-bg text-black font-semibold shadow-md hover:shadow-lg transition">
           Get Started
         </button>
       </div>
 
-      {/* Hamburger Button */}
+      
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden flex justify-center items-center w-10 h-10 rounded-full bg-bg/20 transition-transform duration-300 hover:scale-110"

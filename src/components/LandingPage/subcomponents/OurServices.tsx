@@ -44,13 +44,13 @@ export default function OurServices() {
   });
 
 const services = [
-  { empty: true },
+  // { empty: true },
   { icon: <FaHome />, title: "Residential Construction" },
   { icon: <FaBuilding />, title: "Commercial Construction" },
   { icon: <FaTasks />, title: "Project Management" },
   { icon: <FaTools />, title: "Renovation & Refurbishment" },
   { icon: <FaLeaf />, title: "Sustainable Building" },
-  { empty: true },
+  // { empty: true },
 ];
 
   return (
@@ -64,12 +64,12 @@ const services = [
             <h2 className="text-5xl font-bold text-bg">
               We offer a range of services
             </h2>
-            <p className='text-xl'>
+            <p className='text-xl leading-relaxed'>
               a full range of{" "}
               <span 
-                className="relative text-black highlight highlight-bg px-1"
+                className="inline text-black highlight highlight-bg px-1"
               >
-              construction and building services
+               construction and building services
               </span> 
               {" "}tailored to your needs
             </p>
@@ -82,16 +82,14 @@ const services = [
         </div>
         
         
-<div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10">
+<div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center">
   {services.map((service, index) => (
-    service.empty ? (
-      <div key={index} className='hidden md:block'></div>
-    ) : (
+
       <div 
         key={index} 
-        className="flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:bg-bg py-5 p-3"
+        className="flex flex-col items-center justify-center gap-y-4 text-center transition-all duration-300 hover:shadow-lg hover:bg-bg py-3 p-3 rounded-xl w-46 h-46" 
       >
-        <div className="text-4xl text-black mb-3">
+        <div className="text-4xl text-black ">
           {service.icon}
         </div>
         <h3 className="text-lg font-medium text-black">
@@ -99,7 +97,7 @@ const services = [
         </h3>
       </div>
     )
-  ))}
+  )}
 </div>
 
       </div>

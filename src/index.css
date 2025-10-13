@@ -25,9 +25,9 @@
 }
 
 :root {
-  --bg: oklch(0.9494 0.2035 107);
+  --bg: oklch(0.8714 0.1751 92.61) ;;
   --secondary: 		#f7f7f7;
-  --rightg :#00FF00 ; 
+  --rightg :#ebebeb ; 
   --fg: oklch(0.34 0.17 328.9);
   --sfg :oklch(0.8714 0.1751 92.61) ;
   --ssfg:#FAFA33 ; 
