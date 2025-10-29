@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 
 import Footer from "./components/Footer";
 import LandingPage from './components/LandingPage/LandingPage';
+import HowItWorks from './components/HowItWorks/HowItWorks';
 import { useEffect } from 'react';
 const NotFound = () => { 
 
@@ -26,6 +27,7 @@ export default function Constract() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/howitworks" element={<HowItWorks />} />
             <Route path='*' element = {<NotFound/>} />
         </Routes>
       </main>

@@ -30,9 +30,9 @@ export default function OurServices() {
 
     // Animate shard
     gsap.fromTo('#shard', 
-      { scale: 1, y: 60 }, 
+      { scale: 1, y: 80 }, 
       { 
-        scale: 1.3, 
+        scale: 2, 
         y: 0, 
         scrollTrigger: {
           scrub: true, 

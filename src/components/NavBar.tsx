@@ -10,7 +10,8 @@ export default function NavBar() {
     { name: "Home", to: "/" },
     { name: "Why Us?", to: "/why-us" },
     { name: "Our Experts", to: "/experts" },
-    { name: "Projects", to: "/Projects" },
+    { name: "How It Works", to: "/howitworks" },
+    // { name: "Projects", to: "/Projects" },
   ];
 
   const linkClass = (isActive: boolean) =>

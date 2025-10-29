@@ -11,6 +11,15 @@ importers:
       '@fontsource-variable/montserrat':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource-variable/orbitron':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/audiowide':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource/orbitron':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@gsap/react':
         specifier: ^2.1.2
         version: 2.1.2(gsap@3.13.0)(react@19.1.1)
@@ -357,6 +366,15 @@ packages:
 
   '@fontsource-variable/montserrat@5.2.8':
     resolution: {integrity: sha512-d8wykq7GCKhEOlLwEuQIOK3w3qsXNxwDlH0meru4AZZzQ4/+rZyvHWKL6BBtHdmbovSHEEQDkwkD8qYUKlcFtQ==}
+
+  '@fontsource-variable/orbitron@5.2.8':
+    resolution: {integrity: sha512-Jazvuj2cgBq663z1j/+JdwH2ztqQ8RaGhJgdHYphFbtfowiFaR74R8UgZl7x1skbXmUMWWH1jXfG7mrYFIYK0A==}
+
+  '@fontsource/audiowide@5.2.7':
+    resolution: {integrity: sha512-ude+jAqXaEkV4vfKAYyfub694LSy/OKkYyUHumYrEP3ZgSSP6TomITFLUC8x6Fhc2salL7nuju3xT6aWOHECPg==}
+
+  '@fontsource/orbitron@5.2.8':
+    resolution: {integrity: sha512-ruzrDl5vnqNykk5DZWY0Ezj4aeFZSbCnwJTc/98ojNJHSsHhlhT2r7rwQrA5sptmF8JtB8TQTAvlfRvcV28RPw==}
 
   '@gsap/react@2.1.2':
     resolution: {integrity: sha512-JqliybO1837UcgH2hVOM4VO+38APk3ECNrsuSM4MuXp+rbf+/2IG2K1YJiqfTcXQHH7XlA0m3ykniFYstfq0Iw==}
@@ -1828,6 +1846,12 @@ snapshots:
       levn: 0.4.1
 
   '@fontsource-variable/montserrat@5.2.8': {}
+
+  '@fontsource-variable/orbitron@5.2.8': {}
+
+  '@fontsource/audiowide@5.2.7': {}
+
+  '@fontsource/orbitron@5.2.8': {}
 
   '@gsap/react@2.1.2(gsap@3.13.0)(react@19.1.1)':
     dependencies:

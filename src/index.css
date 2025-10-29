@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource-variable/montserrat";
+@import "@fontsource/audiowide";
+
 /* @import "@fontsource-variable/cairo"; */
 
 
@@ -25,7 +27,7 @@
 }
 
 :root {
-  --bg: oklch(0.8714 0.1751 92.61) ;;
+  --bg: oklch(87.139% 0.17503 92.613) ;
   --secondary: 		#f7f7f7;
   --rightg :#ebebeb ; 
   --fg: oklch(0.34 0.17 328.9);
@@ -55,4 +57,9 @@
     var(--rightg) 0%,
     var(--rightg) 100%
   );
+}
+
+
+.orbi{
+  font-family:"Audiowide" ;
 }
