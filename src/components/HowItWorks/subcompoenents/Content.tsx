@@ -58,7 +58,7 @@ const Content = () => {
         scrollTrigger: {
           trigger: section,
           start: "top 70%",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none play reverse",
         },
       });
 
@@ -112,25 +112,25 @@ const Content = () => {
     >
       <div className="relative w-full max-w-5xl">
         
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-gray-200 origin-top" />
+        <div className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-gray-200 origin-top" />
         
         <div
           ref={lineRef}
-          className="absolute left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-[#fdd017] origin-top"
+          className="absolute left-0  sm:left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-[#fdd017] origin-top"
         />
 
         {steps.map((step, i) => (
           <div
             key={i}
-            className={`step mb-16 flex flex-col sm:flex-row items-center ${
+            className={`step mb-16 flex  flex-row items-center ${
               i % 2 === 0 ? "sm:flex-row-reverse" : ""
             }`}
           >
             
-            <div className="sm:w-1/2 flex justify-center sm:justify-end px-6">
+            <div className="w-full sm:w-1/2 flex justify-center sm:justify-end px-6">
               <div
                 className={`flex flex-col ${
-                  i % 2 === 0 ? "" : "items-end"
+                  i % 2 === 0 ? "" : "sm:items-end items-start"
                 } space-y-4`}
               >
                 <h3 className="number-circle w-12 h-12 flex justify-center items-center font-bold text-white rounded-full shadow-md transition-all duration-300">
@@ -139,7 +139,7 @@ const Content = () => {
                 <h3 className="title-text text-xl font-bold mb-2 tracking-wide">
                   {step.title}
                 </h3>
-                <p className={`text-black text-sm font-semibold leading-relaxed max-w-sm ${i%2===0?'text-left':'text-right'}`}>
+                <p className={`text-black text-sm font-semibold leading-relaxed max-w-sm ${i%2===0?'text-left':'text-left sm:text-right'}`}>
                   {step.desc}
                 </p>
               </div>
@@ -148,7 +148,7 @@ const Content = () => {
             
             <div
               className={`sm:w-1/2 flex justify-center px-6`}>
-              <div className={`flex items-center ${i%2===0?'justify-end':'justify-start'} w-full  transition-all duration-500`}>
+              <div className={`flex items-center ${i%2===0?'justify-end':'justify-end sm:justify-start'} w-full  transition-all duration-500`}>
                 {step.icon}
               </div>
             </div>
