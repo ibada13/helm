@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef, type JSX } from "react";
-import { FaHandshake, FaBuilding, FaKey, FaFileAlt } from "react-icons/fa";
+import { FaHandshake, FaBuilding, FaKey } from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 interface Step {
@@ -23,7 +23,7 @@ const steps: Step[] = [
   },
   {
     number: 2,
-    icon: <FaFileAlt size={75} className="icon" />,
+    icon: <MdOutlineDesignServices size={75} className="icon" />,
     title: "Planning & Design",
     desc: "Our team prepares detailed blueprints, visuals, and timelines for approval.",
   },
@@ -57,8 +57,8 @@ const Content = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 85%",
-          toggleActions: "play none play none",
+          start: "top 70%",
+          toggleActions: "play reverse play reverse",
         },
       });
 
@@ -91,7 +91,7 @@ const Content = () => {
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 80%",
+            start: "top center",
               end: "bottom center",
             
             scrub: true,
@@ -136,10 +136,10 @@ const Content = () => {
                 <h3 className="number-circle w-12 h-12 flex justify-center items-center font-bold text-white rounded-full shadow-md transition-all duration-300">
                   {step.number}
                 </h3>
-                <h3 className="title-text text-lg font-semibold mb-2 tracking-wide">
+                <h3 className="title-text text-xl font-bold mb-2 tracking-wide">
                   {step.title}
                 </h3>
-                <p className={`text-gray-600 text-sm leading-relaxed max-w-sm ${i%2===0?'text-left':'text-right'}`}>
+                <p className={`text-black text-sm font-semibold leading-relaxed max-w-sm ${i%2===0?'text-left':'text-right'}`}>
                   {step.desc}
                 </p>
               </div>
@@ -147,11 +147,8 @@ const Content = () => {
 
             
             <div
-              className={`sm:w-1/2 flex justify-center sm:${
-                i % 2 === 0 ? "justify-end" : "justify-start"
-              } px-6 py-12 mt-6 sm:mt-0`}
-            >
-              <div className="flex items-center justify-center w-20 h-20 rounded-2xl  transition-all duration-500">
+              className={`sm:w-1/2 flex justify-center px-6`}>
+              <div className={`flex items-center ${i%2===0?'justify-end':'justify-start'} w-full  transition-all duration-500`}>
                 {step.icon}
               </div>
             </div>
