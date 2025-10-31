@@ -43,7 +43,7 @@ export default function NavBar() {
       </ul>
 
       
-      <div className="hidden md:block">
+      <div className="hidden md:block ">
         <button className="px-5 py-2 hover:cursor-pointer rounded-full bg-bg text-black font-semibold shadow-md hover:shadow-lg transition">
           Get Started
         </button>
@@ -52,12 +52,12 @@ export default function NavBar() {
       
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden flex justify-center items-center w-10 h-10 rounded-full bg-bg/20 transition-transform duration-300 hover:scale-110"
+        className="md:hidden flex justify-center items-center w-8 h-8 rounded-full bg-bg/80 z-50 transition-transform duration-300 hover:scale-110"
       >
         {isOpen ? (
-          <FaTimes className="text-2xl text-black transform transition-transform duration-300 rotate-180" />
+          <FaTimes className="text-xl text-black transform transition-transform duration-300 rotate-180" />
         ) : (
-          <FaBars className="text-2xl text-black transform transition-transform duration-300" />
+          <FaBars className="text-xl text-black transform transition-transform duration-300" />
         )}
       </button>
 
