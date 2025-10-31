@@ -17,17 +17,17 @@ export default function NavBar() {
   const linkClass = (isActive: boolean) =>
     isActive
       ? "text-bg font-semibold"
-      : "text-gray-700 hover:text-black transition-colors";
+      : "text-white hover:text-sfg transition-colors";
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 md:w-5/6 lg:w-2/3 bg-secondary backdrop-blur-xl border border-white/20 rounded-xl shadow-lg px-6 py-3 flex items-center justify-between z-50">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-11/12 md:w-5/6 lg:w-2/3 bg-black/50 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg px-6 py-4 flex items-center justify-between z-50">
       
       <NavLink to="/" className="flex-shrink-0">
         <img src={logo} alt="Logo" className="w-10 h-10" />
       </NavLink>
 
       
-      <ul className="hidden md:flex items-center space-x-8">
+      <ul className="hidden md:flex items-center space-x-8 font-semibold">
         {navLinks.map((link, i) => (
           <li key={i}>
             <NavLink
@@ -61,12 +61,13 @@ export default function NavBar() {
         )}
       </button>
 
-      {/* Mobile Menu */}
+     
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg border border-white/20 rounded-2xl mt-4 shadow-lg flex flex-col space-y-4 py-6 px-6 transform transition-all duration-500 origin-top ${
+        className={`md:hidden fixed  top-full left-0 w-full bg-black/80 backdrop-blur-xl border border-white/20 rounded-2xl mt-4 shadow-lg flex flex-col space-y-6 py-6 px-6 transform transition-all duration-400 origin-right  ease-out-in
+${
           isOpen
-            ? "opacity-100 scale-y-100 translate-y-0"
-            : "opacity-0 scale-y-0 -translate-y-5 pointer-events-none"
+            ? "opacity-100 scale-x-100 translate-x-0"
+            : "opacity-0 scale-x-0 translate-x-full pointer-events-none"
         }`}
       >
         {navLinks.map((link, i) => (
@@ -74,7 +75,7 @@ export default function NavBar() {
             key={i}
             to={link.to}
             className={({ isActive }) =>
-              `${linkClass(isActive)} block text-base`
+              `${linkClass(isActive)} block text-base font-semibold`
             }
             onClick={() => setIsOpen(false)}
           >
