@@ -1,4 +1,4 @@
-import tower from './assets/theshard.png'
+import tower from './assets/logo.png'
 import gsap from 'gsap'; 
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -9,11 +9,11 @@ import {
   FaTools,
   FaLeaf,
 } from "react-icons/fa";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function OurServices() {
   useGSAP(() => { 
-    
     gsap.fromTo(".highlight", 
       { backgroundSize: "0% 100%" }, 
       { 
@@ -28,12 +28,11 @@ export default function OurServices() {
       }
     );
 
-    // Animate shard
     gsap.fromTo('#shard', 
-      { scale: 1, y: 80 }, 
+      {  y: 0 }, 
       { 
-        scale: 2, 
-        y: 0, 
+         
+        y: -120, 
         scrollTrigger: {
           scrub: true, 
           trigger: '#shard',
@@ -43,20 +42,17 @@ export default function OurServices() {
     );
   });
 
-const services = [
-  // { empty: true },
-  { icon: <FaHome />, title: "Residential Construction" },
-  { icon: <FaBuilding />, title: "Commercial Construction" },
-  { icon: <FaTasks />, title: "Project Management" },
-  { icon: <FaTools />, title: "Renovation & Refurbishment" },
-  { icon: <FaLeaf />, title: "Sustainable Building" },
-  // { empty: true },
-];
+  const services = [
+    { icon: <FaHome />, title: "Residential Construction" },
+    { icon: <FaBuilding />, title: "Commercial Construction" },
+    { icon: <FaTasks />, title: "Project Management" },
+    { icon: <FaTools />, title: "Renovation & Refurbishment" },
+    { icon: <FaLeaf />, title: "Sustainable Building" },
+  ];
 
   return (
-    <section className="relative bg-secondary min-h-screen w-screen overflow-hidden py-20">
-      <div className="relative h-full z-10 max-w-6xl mx-auto px-12 space-y-18 flex flex-col ">
-        
+    <section className="relative bg-secondary min-h-screen w-screen overflow-hidden py-20 flex items-center justify-center">
+      <div className="relative z-10 w-full mx-auto px-12 space-y-18 flex flex-col">
         
         <div className="flex justify-around items-center flex-col md:flex-row space-y-12">
           <div className="flex-1 flex flex-col space-y-6">
@@ -66,10 +62,8 @@ const services = [
             </h2>
             <p className='text-xl leading-relaxed'>
               a full range of{" "}
-              <span 
-                className="inline text-black highlight highlight-bg px-1"
-              >
-               construction and building services
+              <span className="inline text-black highlight highlight-bg px-1">
+                construction and building services
               </span> 
               {" "}tailored to your needs
             </p>
@@ -81,33 +75,29 @@ const services = [
           </div>
         </div>
         
-        
-<div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center">
-  {services.map((service, index) => (
-
-      <div 
-        key={index} 
-        className="flex flex-col items-center justify-center gap-y-4 text-center transition-all duration-300 hover:shadow-lg hover:bg-bg py-3 p-3 rounded-xl w-46 h-46" 
-      >
-        <div className="text-4xl text-black ">
-          {service.icon}
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              className="flex flex-col items-center justify-center gap-y-4 text-center transition-all duration-300 hover:shadow-lg hover:bg-bg py-3 p-3 rounded-xl w-46 h-46" 
+            >
+              <div className="text-4xl text-black ">
+                {service.icon}
+              </div>
+              <h3 className="text-lg font-medium text-black">
+                {service.title}
+              </h3>
+            </div>
+          ))}
         </div>
-        <h3 className="text-lg font-medium text-black">
-          {service.title}
-        </h3>
-      </div>
-    )
-  )}
-</div>
-
       </div>
 
-      {/* Shard background */}
+      {/* Centered logo background */}
       <img
         id="shard"
         src={tower}
-        alt="The Shard"
-        className="absolute right-0 bottom-0 w-auto   max-h-[60%] md:h-full md:translate-y-1/2 object-contain opacity-20"
+        alt="Logo"
+  className="absolute top-1/5 sm:top-0 right-0 m-auto  h-1/2 sm:h-full   w-fit  opacity-20 "
       />
     </section>
   );
