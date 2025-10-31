@@ -44,7 +44,7 @@ export default function NavBar() {
 
       
       <div className="hidden md:block ">
-        <button className="px-5 py-2 hover:cursor-pointer rounded-full bg-bg text-black font-semibold shadow-md hover:shadow-lg transition">
+        <button className="px-6 py-2 hover:cursor-pointer rounded-lg bg-bg text-black font-bold shadow-md hover:shadow-lg hover:text-bg hover:bg-black transition-all duration-300">
           Get Started
         </button>
       </div>
@@ -63,7 +63,7 @@ export default function NavBar() {
 
      
       <div
-        className={`md:hidden fixed  top-full left-0 w-full bg-black/80 backdrop-blur-xl border border-white/20 rounded-2xl mt-4 shadow-lg flex flex-col space-y-6 py-6 px-6 transform transition-all duration-400 origin-right  ease-out-in
+        className={`md:hidden fixed  top-full left-0 w-full bg-black/75 backdrop-blur-xl border border-white/20 rounded-2xl mt-4 shadow-lg flex flex-col space-y-6 py-6 px-6 transform transition-all duration-400 origin-right  ease-out-in
 ${
           isOpen
             ? "opacity-100 scale-x-100 translate-x-0"
@@ -82,7 +82,7 @@ ${
             {link.name}
           </NavLink>
         ))}
-        <button className="w-full px-5 py-2 rounded-full bg-bg text-black font-semibold shadow-md hover:shadow-lg transition">
+        <button className="w-1/2 self-center px-5 py-2 rounded-lg bg-bg text-black font-semibold shadow-md hover:shadow-lg hover:text-bg hover:bg-black transition-all duration-300 ">
           Get Started
         </button>
       </div>

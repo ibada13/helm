@@ -44,6 +44,7 @@ const steps: Step[] = [
 const Content = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const lineRef = useRef<HTMLDivElement | null>(null);
+  const roadRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const sections = gsap.utils.toArray<HTMLElement>(".step");
@@ -57,8 +58,9 @@ const Content = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 70%",
+          start: "top center",
           toggleActions: "play none play reverse",
+          // markers:true , 
         },
       });
 
@@ -90,9 +92,10 @@ const Content = () => {
           height: "100%",
           ease: "none",
           scrollTrigger: {
-            trigger: containerRef.current,
+            trigger: roadRef.current,
             start: "top center",
-              end: "bottom center",
+            end: "bottom center",
+              // markers:true , 
             
             scrub: true,
           },
@@ -112,7 +115,9 @@ const Content = () => {
     >
       <div className="relative w-full max-w-5xl">
         
-        <div className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-gray-200 origin-top" />
+        <div
+          ref={ roadRef}
+          className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 h-full w-[4px] bg-gray-200 origin-top" />
         
         <div
           ref={lineRef}
