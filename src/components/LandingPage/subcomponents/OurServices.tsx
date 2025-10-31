@@ -79,7 +79,7 @@ export default function OurServices() {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="flex flex-col items-center justify-center gap-y-4 text-center transition-all duration-300 hover:shadow-lg hover:bg-bg py-3 p-3 rounded-xl w-46 h-46" 
+              className="flex flex-col items-center bg-secondary justify-center gap-y-4 text-center shadow-lg  transition-all duration-300 hover:shadow-2xl hover:shadow-bg hover:bg-bg py-3 p-3 rounded-lg w-46 h-46" 
             >
               <div className="text-4xl text-black ">
                 {service.icon}
