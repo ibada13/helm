@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import LandingPage from './components/LandingPage/LandingPage';
 import HowItWorks from './components/HowItWorks/HowItWorks';
 import { useEffect } from 'react';
+import CaseStudies from './components/CaseStudies/CaseStudies';
 const NotFound = () => { 
 
   return (
@@ -28,6 +29,7 @@ export default function Constract() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/howitworks" element={<HowItWorks />} />
+          <Route path="/cases" element={<CaseStudies />} />
             <Route path='*' element = {<NotFound/>} />
         </Routes>
       </main>

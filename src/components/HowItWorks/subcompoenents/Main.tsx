@@ -26,7 +26,7 @@ export default function Main() {
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover scale-105 brightness-75"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-secondary/23 to-black" />
 
       <div className="mt-16 self-end md:self-center  relative z-10 flex flex-col items-start  justify-center h-full text-left text-white px-6 w-full gap-y-12">
         <h1 className="text-7xl md:text-8xl font-bold tracking-tight mb-4 text-center w-full">

@@ -111,7 +111,7 @@ const Content = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-white flex flex-col items-center py-20 px-6"
+      className="min-h-screen bg-secondary flex flex-col items-center py-20 px-6"
     >
       <div className="relative w-full max-w-5xl">
         
