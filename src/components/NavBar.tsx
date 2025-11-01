@@ -9,7 +9,7 @@ export default function NavBar() {
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "Why Us?", to: "/why-us" },
-    { name: "Our Experts", to: "/experts" },
+    { name: "Success Stories", to: "/cases" },
     { name: "How It Works", to: "/howitworks" },
     // { name: "Projects", to: "/Projects" },
   ];
