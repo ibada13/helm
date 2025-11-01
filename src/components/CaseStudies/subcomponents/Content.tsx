@@ -67,8 +67,8 @@ export default function Content() {
 
         <h2 className="text-bg text-6xl sm:text-7xl text-center font-bold relative">
           <span className=""> some</span>
-          <span className="z-20 relative sm:static"> words for</span>
-          <span className="z-20 static md:relative"> Name Here</span>
+          <span className="z-20 static sm:relative"> words for</span>
+          <span className="z-30 relative md:static"> Name Here</span>
         </h2>
  
        <div className="relative w-full max-w-4xl px-6 py-8 bg-black/50 backdrop-blur-md rounded-lg shadow-2xl text-white self-end sm:self-center z-30">
